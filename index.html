@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Gerador De Senha</title>
 </head>
@@ -13,31 +17,38 @@
         <section class="sectionGeradorSenha">
             <div class="containerGeradorSenha">
                 <div class="contentGeradorSenha">
-                    <label>
-                        <input type="checkbox" id="chkLetrasMinusculas" checked> Letras Minusculas
+
+                    <div class="chk">
+                        <label>
+                            <input type="checkbox" id="chkLetrasMinusculas" checked> abc
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="chkLetrasMaiusculas"> ABC
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="chkNumeros"> 123
+                        </label>
+
+                        <label>
+                            <input type="checkbox" id="chkCaracteresEspeciais"> @#$%
+                        </label>
+                    </div>
+
+                    <div class="rng">
+                        <label>
+                        <span>Tamanho da senha:</span> 
+                            <input type="range" id="rngComprimento" min="6" max="30" value="8" oninput="atualizarComprimento()">
+                            <span id="ComprimentoAtual">8</span>
                     </label>
+                    </div>
 
-                    <label>
-                        <input type="checkbox" id="chkLetrasMaiusculas"> Letras Maiúsculas
-                    </label>
+                    <input type="text" id="senhaGerada" readonly><br>
 
-                    <label>
-                        <input type="checkbox" id="chkNumeros"> Números
-                    </label>
+                    <button onclick="gerarSenha()" class="gerarSenha">Gerar Senha</button>
 
-                    <label>
-                        <input type="checkbox" id="chkCaracteresEspeciais"> Caracteres Especiais
-                    </label>
-
-                    <label>
-                       <span>Comprimento da Senha:</span> 
-                        <input type="range" id="rngComprimento" min="6" max="30" value="8" oninput="atualizarComprimento()">
-                        <span id="ComprimentoAtual">8</span>
-                    </label>
-
-                    <button onclick="gerarSenha()">Gerar Senha</button>
-
-                    <input type="text" id="senhaGerada" readonly>
+                    
                 </div>
             </div>
         </section>

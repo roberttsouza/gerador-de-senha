@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.containerGeradorSenha{
+    background-color: aquamarine;
+    display: grid;
+    width: 800px;
+    height: 400px;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+.contentGeradorSenha{
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+
+.chk{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.chk label + label{
+    margin-left: 15px;
+}
+
+.rng{
+    margin-bottom: 50px;
+}
+
+#rngComprimento{
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    outline: none;
+
+    height: 10px;
+    border-radius: 9px;  
+}
+
+#rngComprimento::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #2796ee;
+    cursor: pointer;  
+}
+
+#ComprimentoAtual{
+    font-weight: bolder;
+}
+
+#senhaGerada{
+    margin-bottom: 20px;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    border: solid #ffffff;
+    border-radius: 6px;
+    font-size: 20px;
+}
+#senhaGerada:focus{
+    outline: none;
+    border: solid #2796ee;
+}
+
+.gerarSenha{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #2796ee;
+    color: #ffffff;
+    font-weight: bolder;
+    transition-duration: .4s;
+}
+
+.gerarSenha:hover{
+    padding: 10px 50px;
+    background: #37a4fd;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
