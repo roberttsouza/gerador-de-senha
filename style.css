@@ -94,3 +94,21 @@
     box-shadow:  20px 20px 60px #bebebe,
                 -20px -20px 60px #ffffff;
 }
+
+
+@media only screen and (max-width: 600px){
+    .containerGeradorSenha{
+        width: 350px;
+    }
+
+    .rng{
+        width: 100%;
+    }
+    #senhaGerada{
+        width: 85%;
+    }
+    .forcaSenha{
+        position: relative; left: -11%;
+    }
+
+}
