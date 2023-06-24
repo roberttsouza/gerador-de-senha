@@ -4,16 +4,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .containerGeradorSenha{
     background-color: aquamarine;
-    display: grid;
     width: 800px;
     height: 450px;
     background-position: center;
-    position: absolute;
-    top: 40%;
+    position: relative;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 10%);
     border-radius: 20px;
     background: #e0e0e0;
     box-shadow:  20px 20px 60px #bebebe,
@@ -95,6 +94,26 @@
                 -20px -20px 60px #ffffff;
 }
 
+.descricaoInfo{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 70%;
+}
+
+.descricaoInfo h1, p{
+    text-align: center;
+}
+
+.descricaoInfo h4{
+    margin: 30px;
+    text-align: center;
+}
+
+.descricaoInfo li{
+    margin-bottom: 20px;
+}
+
 
 @media only screen and (max-width: 600px){
     .containerGeradorSenha{
@@ -109,6 +128,13 @@
     }
     .forcaSenha{
         position: relative; left: -11%;
+    }
+
+    .descricaoInfo{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        width: 70%;
     }
 
 }

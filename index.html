@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Gerador De Senha</title>
 </head>
+
 <body>
-    
+
     <main class="containerPrincipal">
         <section class="sectionGeradorSenha">
             <div class="containerGeradorSenha">
@@ -38,22 +40,39 @@
 
                     <div class="rng">
                         <label>
-                        <span>Tamanho da senha:</span> 
-                            <input type="range" id="rngComprimento" min="6" max="30" value="8" oninput="atualizarComprimento()">
+                            <span>Tamanho da senha:</span>
+                            <input type="range" id="rngComprimento" min="6" max="30" value="8"
+                                oninput="atualizarComprimento()">
                             <span id="ComprimentoAtual">8</span>
-                    </label>
+                        </label>
                     </div>
                     <p class="forcaSenha"></p>
                     <input type="text" id="senhaGerada" readonly><br>
 
                     <button onclick="gerarSenha()" class="gerarSenha">Gerar Senha</button>
 
-                    
+
                 </div>
             </div>
         </section>
+
+        <section class="descricao">
+            <div class="descricaoInfo">
+                <h1>Bem-vindo à nossa aplicação de geração de senhas seguras! </h1>
+                <p>Com nossa ferramenta, você pode gerar senhas aleatórias e fortes de forma fácil e rápida</p>
+                <h4>Principais funcionalidades:</h4>
+                <li><b>Geração de senha aleatória:</b> Nossa aplicação gera senhas aleatórias com base nas suas preferências, permitindo selecionar opções como letras maiúsculas, números e caracteres especiais.</li>
+                <li><b>Opções personalizáveis:</b> Você pode escolher se deseja incluir letras maiúsculas, números e caracteres especiais na senha gerada, simplesmente marcando as opções correspondentes.</li>
+                <li><b>Comprimento da senha ajustável:</b> Com um controle deslizante, você pode definir o comprimento desejado da senha, personalizando-a conforme suas necessidades de segurança.</li>
+                <li><b>Verificação de senha forte:</b> Além da geração de senhas aleatórias, nossa aplicação também oferece a funcionalidade de verificar se uma senha atende aos critérios de uma senha forte, incluindo a presença de letras maiúsculas, letras minúsculas, números e caracteres especiais.</li>
+            </div>
+        </section>
+
+
     </main>
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
