@@ -1,136 +1,288 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+:root {
+    --rng-color: #d3d3d3;
+    --container-color: #181818;
+    --slider-color: #2796ee;
+    --text-color: #f2f2f2;
+    --gb-senhaGerada: #1f1f1f;
+    
+}
+body{
+   background-color: var(--gb-senhaGerada);  
 }
 
-
-.containerGeradorSenha{
-    background-color: aquamarine;
-    width: 800px;
-    height: 450px;
-    background-position: center;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 10%);
-    border-radius: 20px;
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
+.containerGeradorSenha {
+    margin: 40px auto;
+    color: var(--text-color);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #1a1a1a, #202020);
+    box-shadow: 8px 8px 16px #0d0d0d,
+               -8px -8px 16px #2a2a2a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
 }
 
-.contentGeradorSenha{
+.containerGeradorSenha:hover {
+    transform: scale(1.005);
+}
+
+.contentGeradorSenha {
     text-align: center;
-    position: relative;
-    top: 20%;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.chk{
+.chk {
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.chk label + label{
+.chk label+label {
     margin-left: 15px;
 }
 
-.rng{
+.rng {
     margin-bottom: 50px;
 }
 
-#rngComprimento{
+#rngComprimento {
     -webkit-appearance: none;
-    background: #d3d3d3;
+    background: var(--rng-color);
     outline: none;
 
     height: 10px;
-    border-radius: 9px;  
+    border-radius: 9px;
 }
 
-#rngComprimento::-webkit-slider-thumb{
+#rngComprimento::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
-    border-radius: 50%; 
-    background: #2796ee;
-    cursor: pointer;  
+    border-radius: 50%;
+    background: var(--slider-color);
+    cursor: pointer;
 }
 
-#ComprimentoAtual{
+#ComprimentoAtual {
     font-weight: bolder;
 }
 
-#senhaGerada{
+.password-container {
+    display: flex;
+    gap: 10px;
     margin-bottom: 20px;
-    width: 400px;
+}
+
+#senhaGerada {
+    flex: 1;
     height: 100px;
     text-align: center;
-    border: solid #ffffff;
-    border-radius: 6px;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
     font-size: 20px;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
 }
-#senhaGerada:focus{
+
+#senhaGerada:focus {
     outline: none;
-    border: solid #2796ee;
+    border-color: var(--slider-color);
+    box-shadow: 0 0 0 3px rgba(39, 150, 238, 0.1);
 }
 
-.gerarSenha{
+.gerarSenha {
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    padding: 10px 20px;
-    background: #2796ee;
+    padding: 14px 32px;
+    background: var(--slider-color);
     color: #ffffff;
-    font-weight: bolder;
-    transition-duration: .4s;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+               0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: block;
+    margin: 20px auto 0;
+    width: fit-content;
 }
 
-.gerarSenha:hover{
-    padding: 10px 50px;
-    background: #37a4fd;
-    border-radius: 50px;
-    box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
+.gerarSenha:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+               0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.descricaoInfo{
+.descricaoInfo {
     position: relative;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.descricaoInfo h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--slider-color), #8fd3f4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.descricaoInfo p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--rng-color);
+}
+
+.descricaoInfo h4 {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.descricaoInfo h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, 50%);
-    width: 70%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--slider-color);
 }
 
-.descricaoInfo h1, p{
-    text-align: center;
+.descricaoInfo li {
+    margin-bottom: 1rem;
+    padding: 12px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    list-style-type: none;
+    position: relative;
+    padding-left: 30px;
+    color: #f2f2f2;
+    cursor: pointer;
 }
 
-.descricaoInfo h4{
-    margin: 30px;
-    text-align: center;
+.descricaoInfo li:before {
+    content: '✓';
+    position: absolute;
+    left: 10px;
+    color: var(--slider-color);
+    font-weight: bold;
 }
 
-.descricaoInfo li{
-    margin-bottom: 20px;
+.descricaoInfo li:hover {
+    transform: translateX(10px);
+    background: rgba(39,150,238,0.05);
 }
 
 
-@media only screen and (max-width: 600px){
-    .containerGeradorSenha{
+.copy-btn {
+    background: var(--slider-color);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.copy-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+.copy-btn i {
+    font-size: 1.2rem;
+}
+
+/* Novos estilos para a barra de força */
+.strength-bar-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    background: #ff4444;
+    transition: all 0.3s ease;
+}
+
+/* Melhorias no campo de palavras */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.05);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--slider-color);
+    box-shadow: 0 0 0 3px rgba(39, 150, 238, 0.1);
+}
+
+@media only screen and (max-width: 600px) {
+    .containerGeradorSenha {
         width: 350px;
     }
 
-    .rng{
+    .rng {
         width: 100%;
     }
-    #senhaGerada{
+
+    #senhaGerada {
         width: 85%;
     }
-    .forcaSenha{
-        position: relative; left: -11%;
+
+    .forcaSenha {
+        position: relative;
+        left: -11%;
     }
 
-    .descricaoInfo{
+    .descricaoInfo {
         position: relative;
         left: 50%;
         transform: translate(-50%, 10%);
